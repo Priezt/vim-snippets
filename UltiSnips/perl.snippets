@@ -9,3 +9,9 @@ sub $1{
     $0
 }
 endsnippet
+
+snippet opt "Getopt"
+use Getopt::Std;
+#getopts('ab:c:'); # $opt_a
+getopts('$1');
+endsnippet

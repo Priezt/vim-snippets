@@ -24,3 +24,9 @@ snippet datestring "datestring"
 use POSIX qw( strftime );
 my $date_string = strftime "%Y-%m-%d %H:%M:%S", localtime(time);
 endsnippet
+
+snippet yaml "YAML"
+use YAML::Tiny;
+YAML::Tiny->read("$1")->[0];
+endsnippet
+

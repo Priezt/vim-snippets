@@ -41,3 +41,8 @@ endsnippet
 snippet wf "write_file"
 write_file($1, $0);
 endsnippet
+
+snippet ini "use Config::Tiny to handle .conf"
+use Config::Tiny;
+$config = Config::Tiny->read($0);
+endsnippet

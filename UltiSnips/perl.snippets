@@ -10,7 +10,13 @@ sub $1{
 }
 endsnippet
 
-snippet opt "Getopt"
+snippet opts "Getopt"
+use Getopt::Std;
+#getopts('ab:c:'); # $opt_a
+getopts('$1');
+endsnippet
+
+snippet getopt "Getopt"
 use Getopt::Std;
 #getopts('ab:c:'); # $opt_a
 getopts('$1');
@@ -45,4 +51,9 @@ endsnippet
 snippet ini "use Config::Tiny to handle .conf"
 use Config::Tiny;
 $config = Config::Tiny->read($0);
+endsnippet
+
+snippet color "Term::ANSIColor"
+use Term::ANSIColor;
+print colored("$0", "red");
 endsnippet

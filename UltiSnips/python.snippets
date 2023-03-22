@@ -1,7 +1,16 @@
 snippet strftime "strftime"
+import datetime
 datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 endsnippet
 
 snippet random "random"
+import random
 random.randint(10000000, 99999999)
+endsnippet
+
+snippet decorator "decorator"
+def $0(func):
+    def wrapped_func(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapped_func
 endsnippet

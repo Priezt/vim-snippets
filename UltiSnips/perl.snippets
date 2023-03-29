@@ -57,3 +57,33 @@ snippet color "Term::ANSIColor"
 use Term::ANSIColor;
 print colored("$0", "red");
 endsnippet
+
+snippet lwp "use LWP::UserAgent"
+use HTTP::Request::Common qw(POST GET);
+use LWP::UserAgent;
+my $ua = LWP::UserAgent->new;
+$ua->timeout(20);
+# post json
+my $req = HTTP::Request->new('POST', "http://127.0.0.1");
+$req->header('Content-Type' => 'application/json');
+$req->content($json);
+# post form
+my $req = POST(
+	"http://127.0.0.1",
+	[
+		k1 => 'v1',
+		k2 => 'v2',
+		file => [
+			$filepath,
+		],
+	],
+	'Content_Type' => 'form-data',
+);
+# response
+my $res = $ua->request($req);
+if($res->is_error){
+	print "Error: (".$res->code.") ".$res->message;
+}else{
+	print $res->decoded_content();
+}
+endsnippet

@@ -15,3 +15,8 @@ def $0(func):
         return func(*args, **kwargs)
     return wrapped_func
 endsnippet
+
+snippet wrap "textwrap"
+import textwrap
+wrapped_text = textwrap.fill(one_line_text, max_line_length)
+endsnippet

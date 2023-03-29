@@ -20,3 +20,11 @@ snippet wrap "textwrap"
 import textwrap
 wrapped_text = textwrap.fill(one_line_text, max_line_length)
 endsnippet
+
+snippet requests "requests"
+import requests
+response = requests.get("https://127.0.0.1", verify=False)
+response = requests.post("https://127.0.0.1", {"a":1, "b":2}, verify=False) # post form
+response = requests.post("https://127.0.0.1", json={"a":1, "b":2}, verify=False) # post json
+print(response.text)
+endsnippet

@@ -28,3 +28,8 @@ response = requests.post("https://127.0.0.1", {"a":1, "b":2}, verify=False) # po
 response = requests.post("https://127.0.0.1", json={"a":1, "b":2}, verify=False) # post json
 print(response.text)
 endsnippet
+
+snippet time "time"
+import time
+ts = time.time() # float
+endsnippet

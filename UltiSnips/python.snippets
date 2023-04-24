@@ -33,3 +33,14 @@ snippet time "time"
 import time
 ts = time.time() # float
 endsnippet
+
+snippet read_text "read_text"
+from pathlib import Path
+text = Path(filename).read_text()
+endsnippet
+
+snippet logger "logger"
+import logging
+logger = logging.getLogger(__name__)
+logger.info("")
+endsnippet

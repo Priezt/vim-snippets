@@ -44,6 +44,14 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.info("")
+extra_logger = logging.getLogger('extra')
+extra_logger.setLevel(logging.INFO)
+extra_fhandler = logging.FileHandler('/var/log/extra.log')
+extra_fhandler.setLevel(logging.INFO)
+extra_formatter = logging.Formatter("[%(asctime)s][%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S")
+extra_fhandler.setFormatter(extra_formatter)
+extra_logger.addHandler(extra_fhandler)
+extra_logger.info("")
 endsnippet
 
 snippet copy "copy"

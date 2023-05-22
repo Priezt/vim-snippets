@@ -87,3 +87,11 @@ if($res->is_error){
 	print $res->decoded_content();
 }
 endsnippet
+
+snippet URI "URI uri"
+use URI;
+my $u = URI->new("http://www.example.com/test");
+print $u->host;
+$u->host("example2.com");
+print $url->as_string;
+endsnippet

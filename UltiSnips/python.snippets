@@ -63,3 +63,9 @@ snippet exception "exception"
 import traceback
 print(traceback.format_exc())
 endsnippet
+
+snippet yaml "yaml"
+import yaml
+with open('config.yaml', 'r') as f:
+	config = yaml.safe_load(f)
+endsnippet

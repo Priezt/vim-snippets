@@ -69,3 +69,8 @@ import yaml
 with open('config.yaml', 'r') as f:
 	config = yaml.safe_load(f)
 endsnippet
+
+snippet csrf "csrf"
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt
+endsnippet
